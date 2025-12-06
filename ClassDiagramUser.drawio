@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.4">
+  <diagram name="Sheet 1" id="simple-inheritance">
+    <mxGraphModel dx="1426" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" value="INHERITANCE &amp; POLYMORPHISM" vertex="1">
+          <mxGeometry height="40" width="600" x="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=2" value="User, Admin, dan Member Class Hierarchy" vertex="1">
+          <mxGeometry height="30" width="600" x="250" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="user-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=14;" value="&lt;&lt;abstract&gt;&gt;&#xa;User" vertex="1">
+          <mxGeometry height="260" width="300" x="400" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="user-attributes" parent="user-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="# userId: String&#xa;# name: String&#xa;# email: String" vertex="1">
+          <mxGeometry height="70" width="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="user-line" parent="user-class" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="300" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="user-constructor" parent="user-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="+ User(userId, name, email)" vertex="1">
+          <mxGeometry height="26" width="300" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="user-getters" parent="user-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="+ getUserId(): String&#xa;+ getName(): String&#xa;+ getEmail(): String" vertex="1">
+          <mxGeometry height="54" width="300" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="user-abstract" parent="user-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=2;fontSize=13;fontColor=light-dark(#0066CC,#FFFFFF);" value="+ &lt;&lt;abstract&gt;&gt; displayInfo(): void&#xa;+ &lt;&lt;abstract&gt;&gt; interact(Library): void" vertex="1">
+          <mxGeometry height="52" width="300" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=14;" value="Admin" vertex="1">
+          <mxGeometry height="230" width="320" x="150" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-attributes" parent="admin-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=2;fontSize=12;" value="(No additional attributes)" vertex="1">
+          <mxGeometry height="26" width="320" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-line" parent="admin-class" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-constructor" parent="admin-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="+ Admin(userId, name, email)" vertex="1">
+          <mxGeometry height="26" width="320" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-override" parent="admin-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=13;fontColor=light-dark(#00994D,#FFFFFF);" value="+ displayInfo(): void&#xa;+ interact(Library): void" vertex="1">
+          <mxGeometry height="50" width="320" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-specific" parent="admin-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="+ addBook(Library, Book): void&#xa;+ removeBook(Library, bookId): void&#xa;+ viewAllBooks(Library): void" vertex="1">
+          <mxGeometry height="80" width="320" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="member-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=14;" value="Member" vertex="1">
+          <mxGeometry height="270" width="340" x="630" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="member-attributes" parent="member-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="- borrowedBooks: String[]&#xa;- borrowCount: int&#xa;- MAX_BORROW: int" vertex="1">
+          <mxGeometry height="60" width="340" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="member-line" parent="member-class" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="member-constructor" parent="member-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="+ Member(userId, name, email)" vertex="1">
+          <mxGeometry height="26" width="340" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="member-override" parent="member-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=13;fontColor=light-dark(#00994D,#FFFFFF);" value="+ displayInfo(): void&#xa;+ interact(Library): void" vertex="1">
+          <mxGeometry height="50" width="340" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="member-specific" parent="member-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="+ borrowBook(Library, bookId): boolean&#xa;+ returnBook(Library, bookId): boolean&#xa;+ viewAvailableBooks(Library): void" vertex="1">
+          <mxGeometry height="86" width="340" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="inheritance-admin" edge="1" parent="1" source="admin-class" style="endArrow=block;endSize=20;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeWidth=3;" target="user-class" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="310" y="510" as="sourcePoint" />
+            <mxPoint x="475" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inheritance-label-admin" connectable="0" parent="inheritance-admin" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontStyle=1;fontColor=light-dark(#000000,#FFFFFF);" value="extends&#xa;(Inheritance)" vertex="1">
+          <mxGeometry relative="1" x="-0.15" y="2" as="geometry">
+            <mxPoint x="-35" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inheritance-member" edge="1" parent="1" source="member-class" style="endArrow=block;endSize=20;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeWidth=3;" target="user-class" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="800" y="510" as="sourcePoint" />
+            <mxPoint x="625" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inheritance-label-member" connectable="0" parent="inheritance-member" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontStyle=1;fontColor=light-dark(#006600,#FFFFFF);" value="extends&#xa;(Inheritance)" vertex="1">
+          <mxGeometry relative="1" x="-0.15" y="2" as="geometry">
+            <mxPoint x="35" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
